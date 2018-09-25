@@ -1,6 +1,0 @@
-c:\users\chen\documents\visual studio 2013\Projects\second\second\bin\second.dll.config
-c:\users\chen\documents\visual studio 2013\Projects\second\second\bin\second.dll
-c:\users\chen\documents\visual studio 2013\Projects\second\second\bin\second.pdb
-c:\users\chen\documents\visual studio 2013\Projects\second\second\obj\Debug\second.csprojResolveAssemblyReference.cache
-c:\users\chen\documents\visual studio 2013\Projects\second\second\obj\Debug\second.dll
-c:\users\chen\documents\visual studio 2013\Projects\second\second\obj\Debug\second.pdb

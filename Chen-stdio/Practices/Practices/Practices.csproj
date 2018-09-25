@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{721020BD-9CA5-42E6-B262-EB83A30ADDCF}</ProjectGuid>
+    <ProjectGuid>{2C1E4627-7959-47D7-BAB5-11A35E66CF97}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HelloWorld</RootNamespace>
-    <AssemblyName>HelloWorld</AssemblyName>
+    <RootNamespace>Practices</RootNamespace>
+    <AssemblyName>Practices</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -65,17 +65,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HelloWorld.aspx" />
+    <Content Include="App_Data\MyDataBase.mdf" />
+    <Content Include="App_Data\MyDataBase_log.ldf">
+      <DependentUpon>MyDataBase.mdf</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelloWorld.aspx.cs">
-      <DependentUpon>HelloWorld.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HelloWorld.aspx.designer.cs">
-      <DependentUpon>HelloWorld.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
@@ -91,9 +87,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4015</DevelopmentServerPort>
+          <DevelopmentServerPort>7893</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4015/</IISUrl>
+          <IISUrl>http://localhost:7893/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
