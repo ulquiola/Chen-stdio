@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <!--IE = edge告诉IE使用最新的引擎渲染网页，chrome = 1则可以激活Google Chrome Frame(谷歌内嵌浏览器框架GCF).-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!--浏览器内核控制：content的取值为webkit,ie-comp,ie-stand之一，区分大小写，分别代表用webkit内核，IE兼容内核，IE标准内核。-->
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>无标题文档</title>
+    <link rel="stylesheet" href="./common/css/reset.css" type="text/css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./common/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!--自定义样式-->
+    <link rel="stylesheet" href="./css/demo.css" type="text/css">
+    <!-- Patch to make semantic elements work in IE8 and below. -->
+    <!--[if lte IE 8]>
+      <script src="./common/js/cbHTML5.js"></script>
+      <script type="text/javascript" src="./common/js/excanvas.js"></script>//Canvas for IE8 and older
+    <![endif]-->
+    <!--[if lt IE 9]>
+      //Respond.js 是一个快速、轻量的 polyfill,用于为 IE6-8 以及其它不支持 CSS3 Media Queries 的浏览器提供媒体查询的 min-width 和 max-width 特性
+      <script src="./common/js/respond.1.4.2.min.js"></script>
+      <script src="./common/js/html5shiv.3.7.3.js"></script>//让IE(包括IE6)支持HTML5元素
+      <script src="./common/js/css3-mediaqueries.js"></script>//解决IE8及低版本浏览器不支持CSS3 
+      <script src="./common/js/ie8-responsive-file-warning.js"></script>
+　　 <![endif]-->
+    
+    <!-- <script src="js/lib/require.2.3.6.min.js" async="true" defer data-main="js/config.js"></script> -->
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    <script>
+        $.validator.setDefaults({
+            submitHandler: function() {
+              alert("提交事件!");
+            }
+        });
+        $().ready(function() {
+            $("#formid").validate({
+                rules:{
+                    username:{
+                        required:ture,
+                        minlength:2
+                    },
+                    password:{
+                        required:ture,
+                        minlength:5
+                    },
+                    repassword:{
+                        required:ture,
+                        minlength:5,
+                        equalTo: "#password"
+                    },
+                    email:{
+                        required:ture,
+                        email:ture
+                    },
+                    messages:{
+                        username:{
+                            required:"请输入用户名",
+                            minlength: "用户名必需由两个字母组成"
+                        },
+                        password: {
+                            required: "请输入密码",
+                            minlength: "密码长度不能小于 5 个字母"
+                        },
+                        repassword: {
+                            required: "请输入密码",
+                            minlength: "密码长度不能小于 5 个字母",
+                            equalTo: "两次密码输入不一致"
+                        },
+                        email: "请输入一个正确的邮箱"
+                    }
+                }
+            });
+        });
+    </script>
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
+  </head>
+
+  <body role="document">
+	<header>
+      <h3>      	
+        
+      </h3>
+    </header>
+    <nav>
+    	<div id="nav" class="box cen">
+        	<img class="left" src="./images/logo-title.png" />
+            <div class="right nav">
+            	
+            </div>
+            <div class="clear"></div>
+        </div>
+    </nav>
+    <main>
+    	<h3></h3>
+        <div id="content" class="box cen">
+        	<h1 align="center"><i class="Hui-iconfont textTree">&#xe6d2;</i>&nbsp;会员账号注册</h1>
+            <form action="#" method="post" id="formid" name="formid" onSubmit="return false;">
+            <h4 align="center">
+            	<div class="picbox" id="show">                	
+                    <div id="box">              	
+                    	<!--内容区域-->
+                        <ul class="cen">
+                        <li><label>用户名：</label><input type="text" id="username" name="username" type="text"/><br/></li>
+                        <li><label>密&nbsp;&nbsp;&nbsp;码：</label>&nbsp;<input type="password" id="password" name="password" /><br/></li>
+                        <li><label>确认密码：</label><input type="password" id="repassword" name="repassword" /><br/></li>
+                        <li><label>邮&nbsp;&nbsp;&nbsp;箱：</label>&nbsp;&nbsp;<input type="email" id="email" name="email"/><br/></li>
+                        <li><label>手机号码：</label><input type="text" id="mobile" name="mobile" /><br/></li>
+                        <li><label>验证码：</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="checkcode" name="checkcode" placeholder="请输入验证码"/><div id="chkcodeimg"></div><br/></li>
+                        <li><label><input type="button" value="注册" /></label></li>
+                        </ul>
+                    </div>
+                </div>
+            </h4>
+		    </form>
+        </div>
+    </main>
+    <footer>
+    	<p></p>
+        <h3 align="center">版权所有 &copy; 江西师范大学软件学院</h3>
+    </footer>
+  </body>
+</html>
